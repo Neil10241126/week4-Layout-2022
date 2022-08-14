@@ -1,0 +1,319 @@
+// <--home-->
+.home{
+  background: url(../images/home-header.png) no-repeat center;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: right;
+  font-family: 'Noto Sans Tc';
+  @include mobile{
+    justify-content: end;
+    div{
+      margin-right: 13px;
+    }
+  }
+  p{
+    font-size: 36px;
+    color: $text-col;
+    font-weight: 700;
+    @include mobile{
+      font-size: 16px;
+      font-weight: 500;
+    }
+  }
+  span{
+    font-size: 64px;
+    @include mobile{
+      font-size: 24px;
+      font-weight: 700;
+    }
+  }
+  input{
+    background: $primary;
+    color: $info;
+    font-size: 20px;
+    border: 0px;
+    padding: 6px 12px;
+    &:hover{
+      opacity: 0.7;
+    }
+  }
+}
+
+// <--serve-->
+.serve{
+  background: #FBF2F2;
+  text-align: center;
+  padding: 80px 0;
+  font-family: 'Noto Sans Tc';
+  @include mobile{
+    padding: 40px 0;
+  }
+  h2{
+    font-size: 48px;
+    color: $text-col;
+    font-weight: 700;
+    margin-bottom: 33px;
+    @include mobile{
+      font-size: 24px;
+    }
+  }
+  ul{
+    display: flex;
+    margin: 0 -12px;
+    @include ipad{
+      width: 100%;
+      flex-wrap: wrap;
+      margin: 0;
+    }
+  }
+  li{
+    width: 25%;
+    @include ipad{
+      width: 50%;
+    }
+    @include mobile{
+      width: 100%;
+      margin-top: 33px;
+      &:nth-child(1){
+        margin: 0;
+      }
+    }
+    h3{
+      font-size: 24px;
+      color: $text-col;
+      font-weight: 700;
+      margin: 24px 0 8px 0;
+    }
+    p{
+      text-align: left;
+      padding: 0 12px;
+      @include mobile{
+      }
+    }
+  }
+}
+
+// <--classic-->
+.classic{
+  padding: 80px 0;
+  text-align: center;
+  @include mobile{
+    padding: 40px 0;
+  }
+  h2{
+    font-family: 'Noto Sans Tc';
+    font-size: 48px;
+    color: $text-col;
+    font-weight: 700;
+    margin-bottom: 48px;
+    @include mobile{
+      font-size: 24px;
+      margin-bottom: 24px;
+    }
+  }
+  ul{
+    display: flex;
+    justify-content: space-between;
+    @include ipad{
+      flex-direction: column;
+      align-items: center;
+    }
+    li{
+      @include ipad{
+        margin-bottom: 24px;
+        &:nth-child(3){
+          margin: 0;
+        }
+      }
+    }
+    img{
+      margin-bottom: 8px;
+    }
+    span{
+      font-size: 48px;
+      color: $text-col;
+      font-weight: 700;
+      font-family: 'Roboto';
+      font-style: italic;
+    }
+  }
+}
+
+// <--design-->
+.design{
+  background: url(../images/index-bg.png) no-repeat center;
+  background-size: cover;
+  padding: 80px 0;
+  @include ipad{
+    background: url(../images/index-bg-md.png);
+  }
+  @include mobile{
+    background: url(../images/index-bg-sm.png);
+    padding: 40px 0;
+  }
+  h2{
+    font-size: 48px;
+    color: $info;
+    font-weight: 700;
+    font-family: 'Noto Sans Tc';
+    text-align: center;
+    margin-bottom: 48px;
+    @include mobile{
+      font-size: 24px;
+      margin-bottom: 24px;
+    }
+  }
+  ul{
+    display: flex;
+    @include ipad{
+      flex-direction: column;
+      li:nth-child(1){
+        margin-bottom: 24px;
+      }
+      img{
+        width: 100%;
+      }
+    }
+    li{
+      @include mobile{
+        &:nth-child(1){
+          img{
+            content: url(../images/home-section4-1-sm.png);
+          }
+        }
+        &:nth-child(2){
+          img{
+            content: url(../images/home-section4-2-sm.png);
+          }
+        }
+      }
+    }
+    p{
+      background: #fff;
+      text-align: center;
+      padding: 8px 0;
+      span{
+        font-size: 48px;
+        color: $text-col;
+        font-weight: 700;
+        font-family: 'Roboto';
+        font-style: italic;
+      }
+    }
+  }
+}
+
+// <--recommend-->
+.recommend{
+  padding: 80px 0;
+  @include mobile{
+    padding: 40px 0;
+  }
+  h2{
+    font-size: 48px;
+    font-weight: 700;
+    color: $text-col;
+    font-family: 'Noto Sans Tc';
+    text-align: center;
+    margin-bottom: 48px;
+    @include mobile{
+      font-size: 24px;
+      margin-bottom: 24px;
+    }
+  }
+  ul{
+    display: flex;
+    justify-content: space-between;
+    @include ipad{
+      width: 100%;
+      flex-wrap: wrap;
+    }
+  }
+  li{
+    width: 24%;
+    font-family: 'Noto Sans Tc';
+    border: 1px solid #DEE2E6;
+    box-shadow: 0px 2px 6px #00000029;
+    @include ipad{
+      width: 49%;
+      &:nth-child(1),&:nth-child(2){
+        margin-bottom: 24px;
+      }
+    }
+    @include mobile{
+      width: 100%;
+      margin-bottom: 16px !important;
+      img{
+        width: 766px;
+      }
+    }
+  }
+  .card{
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 205px;
+  }
+  p{
+    margin-bottom: 8px;
+  }
+  span{
+    opacity: 0.6;
+    display: block;
+  }
+}
+
+// <--contract-->
+.contract{
+  background: #FBF2F2;
+  padding: 80px 0;
+  font-family: 'Noto Sans Tc';
+  .box{
+    max-width: 636px;
+    margin: 0 auto;
+    @include mobile{
+      padding: 0 13px;
+    }
+  }
+  h2{
+    font-size: 48px;
+    color: $text-col;
+    font-weight: 700;
+    margin-bottom: 48px;
+    text-align: center;
+    @include mobile{
+      font-size: 24px;
+      margin-bottom: 24px;
+    }
+  }
+  p{
+    font-size: 20px;
+    margin-bottom: 24px;
+  }
+  label{
+    display: block;
+    margin-bottom: 8px;
+  }
+  .style{
+    padding: 6px 12px;
+    width: 100%;
+    margin-bottom: 16px;
+    opacity: 0.6;
+  }
+  .button{
+    display: block;
+    margin: 0 auto;
+    margin-top: 48px;
+    background: $primary;
+    color: $info;
+    border: 0px;
+    padding: 16px 176px;
+    &:hover{
+      opacity: 0.7;
+    }
+  }
+}
