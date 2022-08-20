@@ -3,16 +3,13 @@
   background: url(../images/home-header.png) no-repeat center;
   background-size: cover;
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: right;
   font-family: 'Noto Sans Tc';
-  @include mobile{
-    justify-content: end;
-    div{
-      margin-right: 13px;
-    }
+  text-align: right;
+  .container{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
   }
   p{
     font-size: 36px;
@@ -30,12 +27,14 @@
       font-weight: 700;
     }
   }
-  input{
+  a{
+    display: inline-block;
     background: $primary;
     color: $info;
     font-size: 20px;
     border: 0px;
     padding: 6px 12px;
+    margin-top: 10px;
     &:hover{
       opacity: 0.7;
     }
@@ -71,6 +70,7 @@
   }
   li{
     width: 25%;
+    padding: 0 12px;
     @include ipad{
       width: 50%;
     }
@@ -89,7 +89,7 @@
     }
     p{
       text-align: left;
-      padding: 0 12px;
+      // padding: 0 12px;
       @include mobile{
       }
     }
@@ -116,12 +116,13 @@
   }
   ul{
     display: flex;
-    justify-content: space-between;
+    margin: 0 -12px;
     @include ipad{
       flex-direction: column;
       align-items: center;
     }
     li{
+      padding: 0 12px;
       @include ipad{
         margin-bottom: 24px;
         &:nth-child(3){
@@ -131,10 +132,13 @@
     }
     img{
       margin-bottom: 8px;
+      @include ipad{
+        width: 336px;
+      }
     }
-    span{
+    p{
       font-size: 48px;
-      color: $text-col;
+      color: $primary;
       font-weight: 700;
       font-family: 'Roboto';
       font-style: italic;
@@ -261,7 +265,7 @@
   p{
     margin-bottom: 8px;
   }
-  span{
+  time{
     opacity: 0.6;
     display: block;
   }
@@ -273,8 +277,11 @@
   padding: 80px 0;
   font-family: 'Noto Sans Tc';
   .box{
-    max-width: 636px;
+    width: 50%;
     margin: 0 auto;
+    @include ipad{
+      width: 100%;
+    }
     @include mobile{
       padding: 0 13px;
     }
@@ -298,11 +305,15 @@
     display: block;
     margin-bottom: 8px;
   }
+  .agree{
+    display: inline;
+  }
   .style{
     padding: 6px 12px;
     width: 100%;
     margin-bottom: 16px;
     opacity: 0.6;
+    resize: none;
   }
   .button{
     display: block;
@@ -311,7 +322,8 @@
     background: $primary;
     color: $info;
     border: 0px;
-    padding: 16px 176px;
+    width: 63%;
+    padding: 16px 0;
     &:hover{
       opacity: 0.7;
     }
